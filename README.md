@@ -41,6 +41,9 @@ Expected output: 12+ tables, 1 view, 1 function, 12 skills
 Backend Setup
 Step 1: Install Dependencies
 bashpip install flask flask-cors psycopg2-binary pyjwt werkzeug
+
+
+
 Step 2: Configure Database Connection
 Edit app.py and update the database configuration:
 pythonDATABASE_CONFIG = {
@@ -50,11 +53,20 @@ pythonDATABASE_CONFIG = {
     'password': 'your_postgres_password',
     'port': 5432
 }
+
+
+
 Step 3: Update Secret Key
 pythonapp.config['SECRET_KEY'] = 'your-very-secure-secret-key-here'
+
+
+
 Step 4: Run the Application
 bashpython app.py
 The API will be available at http://localhost:5000
+
+
+
 Step 5: Test Health Check
 bashcurl http://localhost:5000/health
 Expected response:
